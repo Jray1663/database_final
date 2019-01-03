@@ -61,10 +61,10 @@
             console.log('OK');
             if(response.lottery){
                 if(response.result){
-                    alert(response.message+"!!!!<br>您抽到的是  "+response.Wname+"<br>請截圖或拍下照片去實體商店兌獎 code = "+response.winningNum);
+                    alert(response.message+"!!!!\n您抽到的是  "+response.data.Wname+"\n請截圖或拍下照片去實體商店兌獎 code = "+response.data.winningNum);
                 }
                 else{
-                    alert("很可惜～ "+response.message+" !<br>這邊有屬於你的專屬優惠<br>"+response.Oname+"  "+response.Ocontent);
+                    alert("很可惜～ "+response.message+" !\n這邊有屬於你的專屬優惠\n"+response.data.Oname+"  "+response.data.Ocontent);
                 }
             }
             else{
@@ -124,7 +124,7 @@
                     <label for="validationDefaultUsername"><h5>請輸入你的幸運號碼 這將影響你是否能夠抽中大獎</h5></label>
                     <input type="text" class="form-control"  placeholder="0~999" id="num" name="num" required>
                 </div>
-                <input type="button" class="btn btn-primary" value="送出" onclick="CorrectForm()"></input>
+                <input type="button" class="btn btn-primary" onclick="CorrectForm()" value="送出"></input>
             </form>
         </div>
         
